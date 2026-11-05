@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Manos Creativas - Pedidos</title>
+</head>
+<body>
+    <h1>Pedidos</h1>
+    <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+    </ul>
+
+    <form action="https://api.web3forms.com/submit" method="post">
+        <p><input type="hidden" name="access_key" value="97b04cb4-d741-4169-8896-564d0f54d346" />
+            <input type="hidden" name="subject" value="Nueva consulta - Manos Creativas" /></p>
+       
+ <fieldset>
+    <legend>Datos del cliente</legend>
+    <p><label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required="required" /></p>
+
+        <p><label for="correo">Correo:</label>
+            <input type="email" id="correo" name="email" required="required" /></p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos del pedido</legend>
+            <p><label for="tipo">Tipo de artesanía:</label>
+
+                <select id="tipo" name="tipo">
+
+                    <option value="mola">Mola</option>
+                    <option value="cutarra">Cutarra</option>
+                    <option value="tembleque">Tembleque</option>
+                    <option value="otra">Otra</option>
+
+                </select></p>
+
+                <p>Ocasión:<br />
+
+                    <input type="radio" id="ocasion-regalo" name="ocasion" value="regalo" checked="checked" />
+                    <label for="ocasion-regalo">Regalo</label>
+                    <input type="radio" id="ocasion-cumple" name="ocasion" value="cumpleanos" />
+                    <label for="ocasion-cumple">Cumpleaños</label>
+                    <input type="radio" id="ocasion-evento" name="ocasion" value="evento" />
+                    <label for="ocasion-evento">Evento especial</label></p>
+
+                    <p><label for="mensaje">Mensaje:</label><br />
+                        <textarea id="mensaje" name="mensaje" rows="4" cols="30" required="required"></textarea></p>
+                        <p><input type="checkbox" id="acepto" name="acepto" value="si" />
+                            <label for="acepto">Acepto que me contacten para confirmar el pedido</label></p>
+
+         </fieldset>
+         
+         <p><input type="submit" value="Enviar" />
+             <input type="reset" value="Borrar datos" /></p>
+ </form>
+
+</body>
+</html>
